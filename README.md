@@ -4,10 +4,12 @@ A simple speaker system to get the latest news and the weather forecast.
 - it uses the [News API](https://newsapi.org/) to get the latest news headlines;
 - it uses the [Google Text-to-Speech](https://pypi.org/project/gTTS/) python library to convert the text to speech and save it as an mp3 file;
 - it uses the [playsound](https://pypi.org/project/playsound/) python library to play the mp3 file;
-- it is scheduled to run on a daily basis at the same time (9 pm). # TODO 
 
 An example of the final text converted to speech, including 1 day weather forecast and the news headlines:   
-![](https://github.com/mariadancianu/Weather-and-News-Speaker/blob/main/example_text_to_speech.png)
+
+<p float="left">
+  <img src="https://github.com/mariadancianu/Weather-and-News-Speaker/blob/main/example_text_to_speech.png" width="850" height="200"/>
+</p> 
 
 #### AccuWeather API 
 
@@ -19,23 +21,33 @@ After the registration you will have to generate an API key:
 - go to *MY APPS* and click on *Add a new APP* 
 - fill in all the required details (make sure to select Python as the programming language) and click on *CREATE APP*
 
-If you want to get familiar with the API you can follow these steps. Once you have the API key you can access the 1 day weather forecast through the *Forecast API*. This API requires a *locationKey* that can be accessed through the *Location API*.
+If you want to get familiar with the API you can follow these steps. Once you have the API key you can access the 1 day weather forecast through the *Forecast API*. This API requires a *locationKey* that can be accessed through the *Locations API*.
 
-![](https://github.com/mariadancianu/Weather-and-News-Speaker/blob/main/AccuWeather_API.png)
+<p float="left">
+  <img src="https://github.com/mariadancianu/Weather-and-News-Speaker/blob/main/AccuWeather_API.png" width="750" height="400"/>
+</p> 
 
 Click on *Locations API*, go to the *Text Search* section and click on *City Search (results narrowed by countryCode*). You can find your country code here: https://developer.accuweather.com/countries-by-region.   
-  
-Update the following information:
+
+<p float="left">
+  <img src="https://github.com/mariadancianu/Weather-and-News-Speaker/blob/main/AccuWeather_Locations_API_1.png" width="750" height="300"/>
+</p> 
+
+Update the following fields:
 - country_code in the Resource URL
 - apikey in the Query Parameters
 - q in the Query Parameters: this is the name of your city 
 - click on *Send this request* 
 
-If the request was successful, you will receive a *HTTP/1.1 200 OK* response followed by the results of the query in a json format. The response includes the location key to be used in the *Forecast API*. Check the file [location_id_milan.json](https://github.com/mariadancianu/Weather-and-News-Speaker/blob/main/location_id_milan.json) to see an example of the response for this query for the city of Milan. 
+<p float="left">
+  <img src="https://github.com/mariadancianu/Weather-and-News-Speaker/blob/main/AccuWeather_Locations_API_2.png" width="750" height="420"/>
+</p>
+
+If the request was successful, you will receive a *HTTP/1.1 200 OK* response followed by the results of the query in a json format. The json includes the location key to be used in the *Forecast API*. Check the file [location_id_milan.json](https://github.com/mariadancianu/Weather-and-News-Speaker/blob/main/location_id_milan.json) to see an example of the response for this query for the city of Milan. 
 
 Now that you have the *locationKey* go to *Forecast API* and click on *1 Day of Daily Forecasts*. 
 
-Update the following information:
+Similarly to the *Locations API*, you will have to update the following fields:
 - locationKey in the Resource URL
 - apikey in the Query Parameters
 - click on *Send this request* 
