@@ -1,0 +1,50 @@
+{
+    "Headline": {
+        "EffectiveDate": "2023-04-30T08:00:00+02:00",
+        "EffectiveEpochDate": 1682834400,
+        "Severity": 3,
+        "Text": "Expect rainy weather Sunday morning through late Monday night",
+        "Category": "rain",
+        "EndDate": "2023-05-02T08:00:00+02:00",
+        "EndEpochDate": 1683007200,
+        "MobileLink": "http://www.accuweather.com/en/it/milan/214046/daily-weather-forecast/214046?lang=en-us",
+        "Link": "http://www.accuweather.com/en/it/milan/214046/daily-weather-forecast/214046?lang=en-us"
+    },
+    "DailyForecasts": [
+        {
+            "Date": "2023-04-30T07:00:00+02:00",
+            "EpochDate": 1682830800,
+            "Temperature": {
+                "Minimum": {
+                    "Value": 57.0,
+                    "Unit": "F",
+                    "UnitType": 18
+                },
+                "Maximum": {
+                    "Value": 71.0,
+                    "Unit": "F",
+                    "UnitType": 18
+                }
+            },
+            "Day": {
+                "Icon": 18,
+                "IconPhrase": "Rain",
+                "HasPrecipitation": true,
+                "PrecipitationType": "Rain",
+                "PrecipitationIntensity": "Light"
+            },
+            "Night": {
+                "Icon": 18,
+                "IconPhrase": "Rain",
+                "HasPrecipitation": true,
+                "PrecipitationType": "Rain",
+                "PrecipitationIntensity": "Light"
+            },
+            "Sources": [
+                "AccuWeather"
+            ],
+            "MobileLink": "http://www.accuweather.com/en/it/milan/214046/daily-weather-forecast/214046?day=1&lang=en-us",
+            "Link": "http://www.accuweather.com/en/it/milan/214046/daily-weather-forecast/214046?day=1&lang=en-us"
+        }
+    ]
+}
